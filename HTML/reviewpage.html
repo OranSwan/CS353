@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Review Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Sen', sans-serif;
+            background-color: darkslategrey;
+            margin: 0;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 50px;
+            background-color: black;
+            position: fixed;
+            top: 0;
+        }
+
+        .navbar-container {
+            display: flex;
+            align-items: center;
+            padding: 0 50px;
+            height: 100%;
+            color: white;
+        }
+
+        .logo-container {
+            flex: 1;
+        }
+
+        .menu-container {
+            flex: 2;
+        }
+
+        .menu-list {
+            display: flex;
+            list-style: none;
+            font-family: 'sans-serif';
+        }
+
+        .menu-container-item {
+            margin-right: 30px;
+        }
+
+        .menu-container-item.active {
+            font-weight: bold;
+        }
+
+        .profile-container {
+            flex: 2;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .profile-text-container {
+            margin: 0 20px;
+        }
+
+        .profile-picture {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .toggle {
+            height: 20px;
+            width: 40px;
+            background-color: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: relative;
+        }
+
+        .toggle-icon {
+            color: goldenrod;
+        }
+
+        .toggle-ball {
+            width: 18px;
+            height: 18px;
+            background-color: rgb(56, 50, 50);
+            position: absolute;
+            right: 1px;
+            border-radius: 45%;
+            cursor: pointer;
+        }
+
+        .review-container {
+            padding: 20px;
+            margin-top: 50px;
+            margin-left: 50px;
+        }
+
+        .review-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .review-content {
+            margin-top: 20px;
+            color: white;
+        }
+
+        .review-text {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .review-author {
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .review-form {
+            margin-top: 30px;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-rating {
+            margin: 10px 0;
+        }
+
+        /* .sidebar{
+            height: 100%;
+            width: 50px;
+            background-color: black;
+            position: fixed;
+            top: 0;
+            display: flex;
+            flex-direction:column ;
+            align-items: center;
+        } */
+
+        .left-menu-icon{
+            color: white;
+            font-size: 20px;
+            margin-top: 60px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo"><em>The Reel Deal</em></h1>
+            </div>
+
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-container-item active"><a href="#">Home</a></li>
+                    <li class="menu-container-item"><a href="#">Movies</a></li>
+                    <li class="menu-container-item"><a href="#">Reviews</a></li>
+                    <li class="menu-container-item"><a href="#">Social</a></li>
+                    <li class="menu-container-item"><a href="#">About us</a></li>
+                </ul>
+            </div>
+
+            <div class="profile-container">
+                <img class="profile-picture" src="images/profile_pic.jpg" alt="image">
+
+                <div class="profile-text-container">
+                    <span class="profile-text">Profile</span>
+                    <i class="fa-solid fa-sort-down"></i>
+                </div>
+
+                <div class="toggle">
+                    <i class="fa-solid fa-moon toggle-icon"></i>
+                    <i class="fa-solid fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="review-container">
+        <h1 class="review-title">Movie Review: "Title of the Movie"</h1>
+        <div class="review-content">
+            <p class="review-text">
+                This is a sample movie review text. You can provide your detailed review here, discussing the plot, characters, and your overall opinion of the movie.
+            </p>
+            <p class="review-author">Review by John Doe</p>
+        </div>
+        
+        <div class="review-form">
+            <h2 class="form-label">Write Your Review:</h2>
+            <label for="movieName">Movie Name:</label>
+            <input type="text" id="movieName" class="form-input" placeholder="Enter movie name">
+            <label for="description">Review Description:</label>
+            <textarea id="description" class="form-textarea" placeholder="Write your review description"></textarea>
+            <label for="rating" class="form-rating">Star Rating (out of 5):</label>
+            <input type="number" id="rating" class="form-input" placeholder="Enter your rating (1-5)">
+        </div>
+    </div>
+
+    <!-- <div class="sidebar">
+        <a href="#"><i class="left-menu-icon fa-solid fa-magnifying-glass"></i></a>
+        <a href="#"><i class="left-menu-icon fa-solid fa-house"></i></a>
+        <a href="#"><i class="left-menu-icon fa-solid fa-users"></i></a>
+        <a href="#"><i class="left-menu-icon fa-solid fa-bookmark"></i></a>
+        <a href="#"><i class="left-menu-icon fa-solid fa-tv"></i></a>
+        <a href="#"><i class="left-menu-icon fa-regular fa-hourglass"></i></a>
+    </div> -->
+
+    
+
+</body>
+</html>
