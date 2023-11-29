@@ -346,12 +346,12 @@ body {
 .review-title {
     font-size: 24px;
     font-weight: bold;
-    color: black;
+    color: white;
     margin-bottom: 20px;
 }
 
 .review-content {
-    color: black;
+    color: white;
 }
 
 .review-text {

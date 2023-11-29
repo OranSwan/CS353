@@ -19,15 +19,21 @@ app.use(session({
   cookie: { secure: false } // Set to true if using HTTPS
 }));
 
-
 // MongoDB setup
 const mongoURL = 'mongodb+srv://Group10DB:WeAreGroupTen10@group10cluster.df8uelv.mongodb.net/';
 const client = new MongoClient(mongoURL);
 
-app.get('/signup', (req, res) => {
-  res.render('signup');
+// Homepage route
+app.get('/', (req, res) => {
+  // Check if the user is logged in
+  if (req.session.user) {
+    res.render('homepage', { user: req.session.user });
+  } else {
+    res.redirect('/login');
+  }
 });
 
+// Routes
 app.get('/', (req, res) => {
   res.render('login');
 });
@@ -35,8 +41,25 @@ app.get('/', (req, res) => {
 app.get('/login', (req, res) => {
   res.render('login');
 });
-app.get('/settings', (req, res) => {
-  res.render('settings');
+
+app.post('/login', async (req, res) => {
+  const { username, password } = req.body;
+
+  await client.connect();
+  const db = client.db('MoviesRating');
+  const usersCollection = db.collection('users');
+
+  const user = await usersCollection.findOne({ username });
+
+  if (user && await bcrypt.compare(password, user.password)) {
+    // Set a session variable to indicate the user is logged in
+    req.session.user = username;
+    res.redirect('/');
+  } else {
+    res.send('Invalid credentials');
+  }
+
+  await client.close();
 });
 
 app.get('/settings', (req, res) => {
@@ -47,6 +70,9 @@ app.get('/settings', (req, res) => {
   }
 });
 
+app.get('/create', (req, res) => {
+  res.render('create.ejs');
+});
 
 app.post('/signup', async (req, res) => {
   const username = req.body.username;
@@ -71,7 +97,7 @@ app.post('/signup', async (req, res) => {
     const hashedPassword = await bcrypt.hash(password, saltRounds);
     const newUser = { username, password: hashedPassword, firstname, surname, email };
     await usersCollection.insertOne(newUser);
-    res.send('Sign-up successful! You can now log in.');
+    res.send('Sign-up successful! You can now <a href="/login">log in</a>.');
   }
 
   await client.close();
@@ -177,71 +203,3 @@ app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 
 });
-
-
-// const express = require('express');
-// const { MongoClient, ServerApiVersion } = require('mongodb');
-
-// const app = express();
-// const port = 3000;
-
-// const uri = "mongodb+srv://Group10DB:WeAreGroupTen10@group10cluster.df8uelv.mongodb.net/?retryWrites=true&w=majority";
-// const client = new MongoClient(uri, {
-//   serverApi: {
-//     version: ServerApiVersion.v1,
-//     strict: true,
-//     deprecationErrors: true,
-//   }
-// });
-
-// // Serve HTML file
-// app.get('/', (req, res) => {
-//   res.sendFile(__dirname + '/createaccount.html');
-// });
-
-// // Handle form submission
-// app.post('/create-account', express.json(), async (req, res) => {
-//   try {
-//     // Connect to MongoDB
-//     await client.connect();
-
-//     // Access the database
-//     const database = client.db('Group10Cluster');
-//     const collection = database.collection('users');
-
-//     // Extract data from the request body
-//     const { username, password, firstName, surname, email } = req.body;
-
-//     // Insert user into the database
-//     await collection.insertOne({ username, password, firstName, surname, email });
-
-//     // Respond to the client
-//     res.send('User created successfully!');
-//   } catch (error) {
-//     console.error('Error creating user:', error);
-//     res.status(500).send('Internal Server Error');
-//   } finally {
-//     // Close the MongoDB connection
-//     await client.close();
-//   }
-// });
-
-// async function startServer() {
-//   try {
-//     // Connect to MongoDB
-//     await client.connect();
-//     console.log("Connected to MongoDB");
-
-//     // Start your Express server
-//     app.listen(port, () => {
-//       console.log(`Server is running on http://localhost:${port}`);
-//     });
-//   } catch (error) {
-//     console.error("Error connecting to MongoDB:", error);
-//   }
-// }
-
-// // Define your routes and other server logic here
-
-// // Start the server
-// startServer();

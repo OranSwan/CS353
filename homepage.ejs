@@ -1,0 +1,88 @@
+<!-- index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Movie Reviews</title>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo"><em>The Reel Deal</em></h1>
+            </div>
+            <nav class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-container-item active"><a href="#">Home</a></li>
+                    <li class="menu-container-item"><a href="#">Movies</a></li>
+                    <li class="menu-container-item"><a href="reviewpage.html">Reviews</a></li>
+                    <li class="menu-container-item"><a href="#">Profile</a></li>
+                    <li class="menu-container-item"><a href="login.ejs">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Featured Movie Section -->
+        <section class="feature-content">
+            <div class="featured-info">
+                <img class="featured-title" src="images/ft1.png" alt="Featured Movie Title">
+                <p class="featured-desc">Discover the latest blockbuster and immerse yourself in the world of cinema.</p>
+                <button class="featured-button">Explore Now</button>
+            </div>
+        </section>
+
+        <!-- Top Rated Movies Section -->
+        <section class="movie-list-container">
+            <h1 class="movie-list-title">Top Rated Movies</h1>
+            <div class="movie-list-wrapper">
+                <!-- Movie List Items (Repeat as needed) -->
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="images/movie1.jpg" alt="Movie Image">
+                    <div class="movie-details">
+                        <h2 class="movie-list-item-title">The Shawshank Redemption</h2>
+                        <p class="movie-list-item-desc">Two imprisoned men bond over several years, finding solace and eventual redemption through acts of common decency.</p>
+                        <button class="movie-list-item-button">Read Review</button>
+                    </div>
+                </div>
+                <!-- End of Movie List Items -->
+
+                <!-- Repeat Movie List Items as needed -->
+
+            </div>
+        </section>
+
+        <!-- New Releases Section -->
+        <section class="movie-list-container">
+            <h1 class="movie-list-title">New Releases</h1>
+            <div class="movie-list-wrapper">
+                <!-- Movie List Items (Repeat as needed) -->
+                <div class="movie-list-item">
+                    <img class="movie-list-item-img" src="images/movie2.jpg" alt="Movie Image">
+                    <div class="movie-details">
+                        <h2 class="movie-list-item-title">Inception</h2>
+                        <p class="movie-list-item-desc">A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.</p>
+                        <button class="movie-list-item-button">Read Review</button>
+                    </div>
+                </div>
+                <!-- End of Movie List Items -->
+
+                <!-- Repeat Movie List Items as needed -->
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>Contact us: info@moviereviews.com</p>
+        <p>&copy; 2023 Movie Reviews. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
