@@ -1,0 +1,131 @@
+body{
+    margin-top:10%;
+    margin-bottom: 50px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 1%, rgb(163, 17, 17) 30%, rgb(255, 32, 32) 50%, rgb(163, 17, 17)70%,rgba(0,0,0,1) 100%);
+}
+header{
+    position: absolute;
+    top: 0;
+    left:0;
+    height: 10%;
+    width: 100%;
+    background:rgb(7, 7, 7);
+    color: white;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+section{
+    background: rgb(137, 137, 137);
+    display: flex;
+    padding: 20px;
+}
+.info{
+    background: rgb(190, 190, 190,0.1);
+    width: 70%;   
+    border-radius: 10px;         
+}
+.info-textbox{
+    display:block;
+    background-color: rgba(255, 255, 255, 0.5); 
+    border-radius: 10px; 
+}
+/* div{
+    background: rgb(26, 26, 26);
+    color: white;
+    display: inline-block;
+    margin: auto;
+    width: 30%;
+    text-align: center;
+} */
+footer{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height: 50px;
+    background:rgb(7, 7, 7);
+    color: white;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    display: inline-block;
+    margin: 10px 20px 0 0;
+}
+img.info{
+    height:500px;
+    width:auto;
+}
+h1{
+    font-size:50px;
+}
+/* //////////////////////////////////////// */
+.review-container {
+padding: 20px;
+margin-top: 50px;
+margin-left: 50px;
+}
+
+.review-title {
+font-size: 24px;
+font-weight: bold;
+color: white;
+}
+
+.review-content {
+margin-top: 20px;
+color: white;
+}
+
+.review-text {
+font-size: 16px;
+line-height: 1.6;
+}
+
+.review-author {
+font-size: 14px;
+margin-top: 10px;
+}
+
+.review-form {
+margin-top: 30px;
+}
+
+.form-label {
+font-weight: bold;
+}
+
+.form-input {
+width: 100%;
+padding: 10px;
+margin: 5px 0;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+
+.form-textarea {
+width: 100%;
+padding: 10px;
+margin: 5px 0;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+
+.form-rating {
+margin: 10px 0;
+}
+
+.left-menu-icon{
+color: white;
+font-size: 20px;
+margin-top: 60px;
+}
