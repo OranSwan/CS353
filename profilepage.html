@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Your Profile</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <!-- Navbar content goes here (similar to your home page) -->
+    </div>
+
+    <div class="profile-container">
+        <h1 class="profile-title">Your Profile</h1>
+        <div class="profile-content">
+            <div class="profile-details">
+                <h2>Your Details</h2>
+                <p><strong>Username:</strong> <span id="username">JohnDoe</span></p>
+                <p><strong>First Name:</strong> <span id="firstName">John</span></p>
+                <p><strong>Surname:</strong> <span id="surname">Doe</span></p>
+                <p><strong>Email:</strong> <span id="email">johndoe@example.com</span></p>
+            </div>
+
+            <div class="friend-actions">
+                <h2>Friend Actions</h2>
+                <button onclick="showFriends()">Show Friends</button>
+                <button onclick="addFriend()">Add Friend</button>
+            </div>
+        </div>
+        
+        <div class="edit-profile-form">
+            <h2>Edit Your Profile</h2>
+            <form action="/updateUser" method="post">
+                <label for="newFirstname">New First Name:</label>
+                <input type="text" id="newFirstname" name="newFirstname" required>
+                <label for="newSurname">New Surname:</label>
+                <input type="text" id="newSurname" name="newSurname" required>
+                <label for="newEmail">New Email:</label>
+                <input type="text" id="newEmail" name="newEmail" required>
+                <label for="newEmail">New Password:</label>
+                <input type="text" id="newPassword" name="newPassword" required>
+                <button type="submit">Update Profile</button>
+                
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function showFriends() {
+            // Implement logic to show friends
+            alert("Showing friends...");
+        }
+
+        function addFriend() {
+            // Implement logic to add friends
+            alert("Adding friend...");
+        }
+    </script>
+</body>
+
+</html>

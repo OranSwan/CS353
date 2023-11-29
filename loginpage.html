@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <img src="images/Reel_logo.jpg" alt="logo">
+    <div class="login-container">
+        <h1>Login</h1>
+        <form action="your_server_endpoint.php" method="post">
+            <div class="input-container">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <input type="submit" value="Log In">
+        </form>
+        <p>Don't have an account? <a class="login-link" href="createaccount.html">Create account</a></p>
+    </div>
+
+    <div class="header">
+        <em>The Reel Deal</em>
+    </div>
+</body>
+
+</html>
