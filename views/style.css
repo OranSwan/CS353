@@ -1,0 +1,408 @@
+/* Create Account Page Css */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(56, 50, 50);
+    text-align: center;
+    background-size: cover;
+    background-image: url(images/feature3.jpg);
+}
+
+.header {
+    position: absolute;
+    top: 30px;
+    left: 445px;
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    font-size: 50px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px 0px white;
+}
+
+img {
+    width: 150px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-align: center;
+    border-radius: 150px;
+    box-shadow: 0px 0px 10px 0px #000;
+}
+
+.account-container {
+    margin: 160px auto;
+    width: 300px;
+    padding: 40px;
+    background: black;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px 0px white;
+}
+
+h1 {
+    margin: 0;
+    padding: 10px 0 20px;
+    color: white;
+}
+
+.input-container {
+    text-align: left;
+    margin-bottom: 20px;
+    color: white;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #ebe9e9;
+}
+
+.login-link {
+    color: white;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+/* Login Page Css */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(56, 50, 50);
+    text-align: center;
+    background-size: cover;
+    background-image: url(images/feature3.jpg);
+}
+
+.header {
+    position: absolute;
+    top: 30px;
+    left: 445px;
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    font-size: 50px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px 0px white;
+}
+
+img {
+    width: 150px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-align: center;
+    border-radius: 150px;
+    box-shadow: 0px 0px 10px 0px #000;
+}
+
+.login-container {
+    margin: 160px auto;
+    width: 300px;
+    padding: 40px;
+    background: black;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px 0px white;
+}
+
+h1 {
+    margin: 0;
+    padding: 10px 0 20px;
+    color: white;
+}
+
+.input-container {
+    text-align: left;
+    margin-bottom: 20px;
+    color: white;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #ebe9e9;
+}
+
+.login-link {
+    color: white;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+/* Homepage Css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: relative; /* Add position relative */
+    z-index: 1; /* Add z-index */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+}
+
+.menu-container-item {
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+/* Main Content Styles */
+.container {
+    background-color: black;
+    padding: 20px;
+}
+
+.feature-content {
+    background-size: cover;
+    background-position: center;
+    padding: 100px;
+    text-align: center;
+    color: white;
+    position: relative; /* Add position relative */
+    z-index: 0; /* Add z-index */
+}
+
+.featured-info {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.featured-title {
+    size: 400px;
+    margin: 5px ;
+}
+
+.featured-desc {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.featured-button {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Movie List Styles */
+.movie-list-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.movie-list-wrapper {
+    display: flex;
+    overflow-x: auto;
+}
+
+.movie-list-item {
+    margin-right: 30px;
+}
+
+.movie-details {
+    max-width: 300px;
+    color: white;
+}
+
+.movie-list-item-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.movie-list-item-desc {
+    margin-bottom: 15px;
+}
+
+.movie-list-item-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Review Page Css */
+
+/* Review Page CSS */
+.review-body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.review-navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.review-navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.review-menu-list {
+    list-style: none;
+    display: flex;
+}
+
+.review-menu-container-item {
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+/* Review Content Styles */
+.review-container {
+    background-color: #f4f4f4;
+    color: #000;
+    padding: 20px;
+}
+
+.review-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.review-content {
+    color: white;
+}
+
+.review-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #000;
+}
+
+.review-author {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.review-form {
+    margin-top: 30px;
+}
+
+.review-form-label {
+    font-weight: bold;
+}
+
+.review-form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.review-form-textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.review-form-rating {
+    margin: 10px 0;
+}
+
+.review-form-submit-button {
+    background-color: #333;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+

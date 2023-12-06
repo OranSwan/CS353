@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create Account</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <img src="images/Reel_logo.jpg" alt="logo">
+    <div class="account-container">
+        <h1>Create Account</h1>
+        <form action="/signup" method="post">
+            <div class="input-container">
+                <label for="Username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-container">
+                <label for="password">First name:</label>
+                <input type="text" id="firstname" name="firstname" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Surname:</label>
+                <input type="text" id="surname" name="surname" required>
+            </div>
+            <div class="input-container">
+                <label for="password">Email:</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <input type="submit" value="Create Account">
+        </form>
+        <p>Already have an account? <a class="login-link" href="login">Login here</a></p>
+    </div>
+
+    <div class="header">
+        <em>The Reel Deal</em>
+    </div>
+</body>
+
+</html>

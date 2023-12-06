@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Review Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body class="review-body">
+    <div class="review-navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo"><em>The Reel Deal</em></h1>
+            </div>
+
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-container-item active"><a href="/homepage">Home</a></li>
+                    <li class="menu-container-item"><a href="#">Movies</a></li>
+                    <li class="menu-container-item"><a href="/review">Reviews</a></li>
+                    <li class="menu-container-item"><a href="settings">Profile</a></li>
+                    <li class="menu-container-item"><a href="/login">Logout</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="review-container">
+        <h1 class="review-title">Movie Review: "Title of the Movie"</h1>
+        <div class="review-content">
+            <p class="review-text">
+                This is a sample movie review text. You can provide your detailed review here, discussing the plot, characters, and your overall opinion of the movie.
+            </p>
+            <p class="review-author">Review by John Doe</p>
+        </div>
+        
+        <div class="review-form">
+            <form action="/submitReview" method="post">
+                <h2 class="review-form-label">Write Your Review:</h2>
+                <label for="movieName">Movie Name:</label>
+                <input type="text" id="movieName" name="movieName" class="review-form-input" placeholder="Enter movie name">
+                <label for="userName">User Name:</label>
+                <input type="text" id="userName" name="userName" class="review-form-input" placeholder="Enter user name">
+                <label for="rating" class="review-form-rating">Star Rating (out of 10):</label>
+                <input type="number" id="reviewScore" name="reviewScore" min="1" max="10" class="review-form-input" placeholder="Enter your rating (1-10)">
+                <label for="description">Review Description:</label>
+                <textarea id="reviewText" name="reviewText" class="review-form-textarea" placeholder="Write your review description"></textarea>
+                <button type="submit" class="review-form-submit-button">Submit Review</button>
+            </form>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Settings</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="settings-container">
+        <h2>User Settings</h2>
+        
+        <!-- Profile Information -->
+        <div class="section">
+            <h3>Profile Information</h3>
+            <form id="profileForm" action="/updateUser" method="post">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" value="<%= user.firstName %>"><br>
+                
+                <label for="lastName">Surname:</label>
+                <input type="text" id="lastName" name="lastName" value="<%= user.lastName %>"><br>
+            
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" value="<%= user.username %>" readonly><br> <!-- Username is typically not editable -->
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="<%= user.email %>"><br>
+            
+                <input type="submit" value="Update Profile">
+            </form>
+            
+        </div>
+
+        <form id="passwordForm" action="/updatePassword" method="post">
+            <label for="oldPassword">Old Password:</label>
+            <input type="password" id="oldPassword" name="oldPassword" required><br>
+        
+            <label for="newPassword">New Password:</label>
+            <input type="password" id="newPassword" name="newPassword" required><br>
+        
+            <input type="submit" value="Change Password">
+        </form>
+        <!-- Account Preferences -->
+        <div class="section">
+            <h3>Account Preferences</h3>
+            <form id="deleteAccountForm" action="/deleteAccount" method="post">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required><br>
+            
+                <input type="submit" value="Delete Account" onclick="return confirm('Are you sure you want to delete your account? This action cannot be undone.');">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
