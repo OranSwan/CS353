@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>ReelDeal</title>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h1 class="logo"><em>The Reel Deal</em></h1>
+            </div>
+            <nav class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-container-item active"><a href="/homepage">Home</a></li>
+                    <li class="menu-container-item"><a href="/search">Movies</a></li>
+                    <li class="menu-container-item"><a href="/review">Review</a></li>
+                    <li class="menu-container-item"><a href="settings">Profile</a></li>
+                    <li class="menu-container-item"><a href="/login">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <form action="/searchMovies" method="post">
+            <label for="searchQuery">Search Movies:</label>
+            <input type="text" id="searchQuery" name="searchQuery" required>
+            <button type="submit">Search</button>
+          </form>
+    </main>
+
+    <footer class="footer">
+        <p>Contact us: info@moviereviews.com</p>
+        <p>&copy; 2023 Movie Reviews. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

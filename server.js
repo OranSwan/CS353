@@ -7,6 +7,10 @@ const session = require('express-session');
 const app = express();
 const port = 3000;
 const saltRounds = 10;
+const movieDetails = new mongoose.Schema({
+  title: String,
+});
+const Movie = mongoose.model('Movie', movieDetails);
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -60,8 +64,12 @@ app.get('/index', (req, res) => {
   res.render('index');
 });
 
+app.get('/search', (req, res) => {
+  res.render('search');
+});
+
 app.get('/create', function(req, res) {
-  res.render('create'); // Assuming 'create' is the name of your view file
+  res.render('create');
 });
 
 
@@ -276,8 +284,6 @@ app.post('/submitReview', async (req, res) => {
 });
 
 
-
-
 app.use(express.static('public'));
 app.post('/updateEmail', async (req, res) => {
   // Your code to update email
@@ -286,9 +292,29 @@ app.post('/updatePassword', async (req, res) => {
   // Your code to update password
 });
 
-
-
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 
+});
+
+/////////// SEARCH ///////////////////////////////////////////////////////////////////////////////
+app.post('/searchMovies', async (req, res) => {
+  const { searchQuery } = req.body;
+
+  try {
+    await client.connect();
+    const db = client.db('MoviesRating');
+    const moviesCollection = db.collection('movies');
+
+    // case insensitive search
+    const regex = new RegExp(searchQuery, 'i');
+    const matchingMovies = await moviesCollection.find({ title: regex }).toArray();
+
+    res.render('searchResults', { movies: matchingMovies });
+  } catch (error) {
+    console.error('Error during movie search:', error);
+    res.send('An error occurred during movie search.');
+  } finally {
+    await client.close();
+  }
 });
